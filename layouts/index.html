@@ -1,0 +1,19 @@
+{{ partial "header.html" }}
+    {{- range .Data.Pages }}
+        {{- if eq .Type "post" -}}
+            <article>
+                <a href="{{ .Permalink }}">
+                    <h3>
+                        {{ .Title }}
+                    </h3>
+                </a>
+                <p class="subheading">
+                    {{ .Date.Format "Jan 2, 2006" }}
+                </p>
+                <p>
+                      {{ .Summary }}
+                </p>
+            </article>
+        {{- end -}}
+    {{- end }}
+{{ partial "footer.html" . }}

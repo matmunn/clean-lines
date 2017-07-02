@@ -1,0 +1,10 @@
+{{ partial "header.html" }}
+    <h3>{{ .Title }}</h3>
+    <p class="subheading">Published {{ .Date.Format "Jan 2, 2006" }}</p>
+    {{ .Content }}
+    <p class="home-link">
+        <a href="/">
+            &laquo; Back to home
+        </a>
+    </p>
+{{ partial "footer.html" . }}
